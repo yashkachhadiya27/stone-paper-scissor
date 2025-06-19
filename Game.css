@@ -1,0 +1,21 @@
+body{
+  text-align: center;
+}
+
+.images{
+  height: 75px;
+  width: 75px; 
+}
+.buttons{
+  margin: 5px;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  border: none;
+  background-color: rgba(238, 239, 235, 0.669);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+
+

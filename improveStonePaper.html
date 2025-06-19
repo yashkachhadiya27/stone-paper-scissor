@@ -1,0 +1,99 @@
+<!-- AA GAME NE FUNCTIONS NA USE THI SIMPLE BANAVI CHAKYE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Stone-paper-scissor Game</title>
+  <link rel="stylesheet" href="Game.css">
+</head>
+
+<body>
+  <h1>Stone-paper-scissor Game</h1>
+  <hr>
+
+  <div id="button-container">
+
+    <!-- AA STONE NU -->
+    <button class="buttons" 
+    onclick="
+     
+     let computerChoise = genrateComputerChoise();    // AA FUNCTION CALL THYO
+    
+     let resultMsg;
+    if(computerChoise === 'Scissor'){
+      score.win++;                         // aa je che ae OBJECT che je SCORE ne store and UPDATE krse
+      resultMsg= 'You Win';
+    }
+    else if(computerChoise === 'Stone'){
+      score.tie++;
+      resultMsg= `it's a tie`;
+    }
+    else if(computerChoise === 'Paper'){
+      score.lost--;
+      resultMsg= 'computer has won';
+    }
+
+    showAlert('Stone',computerChoise,resultMsg);
+    
+    "><img src="images/Stone.png" alt="stone-image" class="images"></button>
+
+    <!--  AA PAPER NU  -->
+    <button class="buttons" onclick="
+    
+    computerChoise = genrateComputerChoise();
+  
+    if(computerChoise === 'Scissor'){
+      score.lost--;
+      resultMsg= 'computer has won';
+    }
+    else if(computerChoise === 'Stone'){
+      score.win++; 
+      resultMsg= 'You Win';
+    }
+    else if(computerChoise === 'Paper'){
+      score.tie++;
+      resultMsg= `it's a tie`;
+    }
+
+    showAlert('Paper',computerChoise,resultMsg);
+    "><img src="images/Paper.png" alt="Paper-image" class="images"></button>
+
+    <!-- aa SCISSOR no -->
+    <button class="buttons" 
+    onclick="
+
+    computerChoise = genrateComputerChoise();
+    
+    if(computerChoise === 'Scissor'){
+      score.tie++;
+      resultMsg= `it's a tie`;
+    }
+    else if(computerChoise === 'Stone'){
+      score.lost--;
+      resultMsg= 'computer has won';
+    }
+    else if(computerChoise === 'Paper'){
+      score.win++; 
+      resultMsg= 'You Win';
+    }
+
+    showAlert('Scissor',computerChoise,resultMsg);
+    
+    "><img src="images/scissors.png" alt="scissore-image" class="images"></button>
+  </div>
+  <button class="reset-button"
+  onclick="localStorage.clear();
+  resetScore();
+  ">Reset</button>
+<div class="ui-div">
+  
+  <h3 id="user-move"></h3>
+  <h3 id="computer-move"></h3>
+  <h3 id="result"></h3>
+  <h3 id="score"></h3>
+
+</div> 
+  <script src="Game.js"></script>
+</body>
+
+</html>
